@@ -2109,12 +2109,11 @@ function bindPortfolioVideoCards() {
     if (!fullVideo) return;
 
     card.addEventListener('click', (event) => {
-      // 移除 .sop-toggle，这样点击“揭秘”按钮时不会触发视频弹窗，而是正常执行链接跳转
-      const trigger = event.target.closest('.portfolio-card-img img, .sop-toggle');
-      if (!trigger) return;
-      
+      const imgEl = event.target.closest('.portfolio-card-img');
+      const btnEl = event.target.closest('.sop-toggle');
+      if (!imgEl && !btnEl) return;
+
       event.preventDefault();
-      event.stopPropagation();
       openVideoModal(fullVideo);
     });
   });
