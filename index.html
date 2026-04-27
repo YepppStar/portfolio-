@@ -546,22 +546,44 @@
 
   .portfolio-more-cta {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 18px;
+    gap: 16px;
     padding: 34px 20px 12px;
     text-align: center;
+    flex-wrap: wrap;
   }
 
   .portfolio-more-copy {
-    max-width: 560px;
     font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.9;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
     letter-spacing: 0.04em;
-    color: var(--light-text);
+    color: var(--dark);
+    animation: gentlePulse 2.5s ease-in-out infinite;
+    white-space: nowrap;
+  }
+
+  .portfolio-more-copy .arrow-hint {
+    display: inline-block;
+    animation: bounceArrow 1s ease-in-out infinite;
+    margin-left: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--earth);
+    vertical-align: middle;
+  }
+
+  @keyframes gentlePulse {
+    0%, 100% { opacity: 0.8; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(-3px); }
+  }
+
+  @keyframes bounceArrow {
+    0%, 100% { transform: translateX(0); opacity: 0.6; }
+    50% { transform: translateX(4px); opacity: 1; }
   }
 
   .portfolio-more-btn {
@@ -1769,7 +1791,7 @@
       </div>
     </div>
     <div class="portfolio-more-cta">
-      <p class="portfolio-more-copy">这里的篇章仅为冰山一角，移步飞书，阅览更完整的内容宇宙！</p>
+      <p class="portfolio-more-copy">这里的篇章仅为冰山一角，移步飞书，阅览更完整的内容宇宙！<span class="arrow-hint">→</span></p>
       <a class="portfolio-more-btn" href="https://tcnoxr43ol8x.feishu.cn/wiki/Qk9qwkGg1iz07Vkhg8acRVjOn0g?from=from_copylink" target="_blank" rel="noopener noreferrer">🔗 探索完整库</a>
     </div>
   </div>
@@ -1810,7 +1832,7 @@
       </div>
     </div>
     <div class="portfolio-more-cta">
-      <p class="portfolio-more-copy">这里的篇章仅为冰山一角，移步飞书，阅览更完整的内容宇宙！</p>
+      <p class="portfolio-more-copy">这里的篇章仅为冰山一角，移步飞书，阅览更完整的内容宇宙！<span class="arrow-hint">→</span></p>
       <a class="portfolio-more-btn" href="https://tcnoxr43ol8x.feishu.cn/wiki/Hw2OwYXTXiGMzzkfkBic5Az4n7e?from=from_copylink" target="_blank" rel="noopener noreferrer">🔗 探索完整库</a>
     </div>
   </div>
